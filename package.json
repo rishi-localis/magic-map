@@ -1,0 +1,24 @@
+{
+  "homepage": "https://rishi-localis.github.io/magic-map",
+  "name": "mapbox-custom-layer",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "webpack-dev-server --progress --hot --open",
+    "start-local": "webpack-dev-server --env.local --progress --hot --open",
+    "build": "webpack --config webpack.config.js",
+    "postbuild": "npm-prepare-dist"
+  },
+  "dependencies": {
+    "@loaders.gl/csv": "^3.2.0",
+    "d3-scale": "^2.0.0",
+    "deck.gl": "^8.8.0",
+    "mapbox-gl": "^1.13.0",
+    "npm-prepare-dist": "^0.4.0"
+  },
+  "module": "./index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts"
+}
